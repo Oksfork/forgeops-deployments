@@ -88,7 +88,7 @@ Aim to future implementation technology like terraform for IaC and jenkins for C
 
 ## 8. Personal Conclusions
 
-What did you learn? - I learned the basics and cost of have a DevOps expert in my team and all the advantages of the work culture
+What did you learn? - I learned the basics and cost of have a DevOps expert in my team and all the advantages of the work culture. Not only of the practical tooling, i learned how to improve my way of development and changing it. I understood the importance of this role and have and expertise. This will improve the quality and speed delivery of my team
 
 ## 9. References
 

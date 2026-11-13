@@ -1,0 +1,6 @@
+[servers]
+node-01 ansible_host=<IP_ROUTE>
+
+[servers:vars]
+ansible_user=<USER>
+ansible_ssh_private_key_file=<FILE PATH>

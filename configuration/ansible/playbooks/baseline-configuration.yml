@@ -1,0 +1,34 @@
+- name: Baseline Configuration
+  hosts: servers
+  become: true
+
+  tasks:
+    - name: Update apt cache
+      ansible.builtin.apt:
+        update_cache: true
+        cache_valid_time: 3600
+    
+    - name: Install basic packages
+      ansible.builtin.apt:
+        name: 
+          - curl
+          - git
+          - htop
+          - vim
+          - tree
+        state: present
+    
+    - name: Gather packages facts
+      ansible.builtin.package_facts:
+        manager: apt
+    
+    - name: Verify Installation
+      ansible.builtin.assert:
+        that:
+          - "'curl' in ansible_facts.packages"
+          - "'git' in ansible_facts.packages"
+          - "'htop' in ansible_facts.packages"
+          - "'vim' in ansible_facts.packages"
+          - "'tree' in ansible_facts.packages"
+        fail_msg: "One or more packages are not installed"
+        success_msg: "All packages are installed"

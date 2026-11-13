@@ -1,0 +1,11 @@
+- name: System Information
+  hosts: servers
+
+  tasks:
+    - name: Get system information
+      debug:
+        msg:
+          - "Hostname: {{ ansible_facts.hostname }}"
+          - "Distribution: {{ ansible_facts.distribution }}"
+          - "Version: {{ansible_facts.distribution_version}}"
+          - "Architecture: {{ ansible_facts.architecture }}"

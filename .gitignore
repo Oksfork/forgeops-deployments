@@ -1,0 +1,33 @@
+# Local copies with real hosts, users, and key paths.
+# Names are exact, so the *.example templates next to them stay in git.
+host.ini
+hosts.ini
+configuration/ansible/ansible.cfg
+
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa
+id_ed25519
+vault-password
+.vault_pass
+*.vault_pass
+
+# Terraform state and secret variable files.
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+.terraform/
+*.auto.tfvars
+terraform.tfvars
+
+# Local tooling
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ansible/
+*.retry
+*.log
